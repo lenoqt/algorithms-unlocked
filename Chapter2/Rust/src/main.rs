@@ -1,3 +1,5 @@
+
+#[allow(dead_code)]
 #[derive(Debug)]
 struct Result{
     found: bool,
@@ -24,8 +26,7 @@ fn main() {
     let res = linear_search(&v, 4);
     let res1 = linear_search(&v, 99);
     println!("Valid search");
-    println!("Found: {}, Value: {}, Index: {}", res.found, res.value, res.index);
+    println!("{:?}", res);
     println!("Invalid Search");
-    println!("Found: {}, Value: {}, Index: {}", res1.found, res1.value, res1.index);
-
+    println!("{:?}", res1);
 }
