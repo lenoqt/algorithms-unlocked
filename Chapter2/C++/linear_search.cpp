@@ -7,8 +7,8 @@ struct output {
   unsigned int index;
 };
 
-output linear_search(std::vector<int> A, int value) {
-  output o;
+output linear_search(std::vector<int> &A, int value) {
+  output o = {};
   o.found = false;
   for (int i = 0; i < A.size(); i++) {
     if (value == A[i]) {
@@ -31,7 +31,6 @@ int main(int argc, char *argv[]) {
   std::cout << "Found: " << o.found << std::endl;
   std::cout << "Value: " << o.value << std::endl;
   std::cout << "Index: " << o.index << std::endl;
- delete [] o;
 
   std::cout << "Invalid output" << std::endl;   
   std::cout << "Found: " << no.found << std::endl;
